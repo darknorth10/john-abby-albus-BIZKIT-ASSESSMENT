@@ -48,25 +48,21 @@ def search_users(args):
             
             if key  == "id":
                 if args[key] == str(item[key]):
-                    # if not is_included(item['id'], searched_byID):
                         search_filters['id'].append(item)
                         
                         
             elif key == "age":
                 if int(args[key]) >= item["age"] - 1 and int(args[key]) <= item["age"] + 1:
-                    # if not is_included(item['id'], searched_byAge):
                         search_filters['age'].append(item)
                         
                         
             elif key == "name":
                 if item[key].find(args[key]) >= 0:
-                    # if not is_included(item['id'], searched_byName):
                         search_filters['name'].append(item)
                         
                         
             elif key == "occupation":
                 if item[key].find(args[key]) >= 0:
-                    # if not is_included(item['id'], searched_byOccupation):
                         search_filters['occupation'].append(item)
                         
 
