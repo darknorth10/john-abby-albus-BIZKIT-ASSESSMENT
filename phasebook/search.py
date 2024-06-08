@@ -78,7 +78,10 @@ def search_users(args):
                     if not is_included(item['id'], search_list):
                         search_list.append(item)
             
-    return search_list
+    if len(search_list) == 0:
+        return USERS
+    else:
+        return search_list
 
 
 def is_included(id, given_list):
